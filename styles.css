@@ -1,0 +1,243 @@
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    transition: background-color 0.3s;
+}
+.game-container {
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+    margin-bottom: 20px;
+}
+.cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #000;
+    font-size: 2em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.cell:hover {
+    background-color: #eaeaea;
+}
+.dark-mode .cell:hover {
+    background-color: #333;
+}
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #0066CC;
+    color: white;
+    transition: background-color 0.3s;
+}
+button:hover {
+    background-color: #0056b3;
+}
+.light-mode {
+    background-color: #f0f0f0;
+    color: black;
+}
+.light-mode .game-container {
+    background-color: white;
+}
+.dark-mode {
+    background-color: #333;
+    color: white;
+}
+.dark-mode .game-container {
+    background-color: #222;
+}
+
+/* Container for the dark mode toggle button in the top right corner */
+.top-right-container {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+/* Styling for the dark mode toggle switch */
+#toggleDarkMode {
+    overflow: hidden;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+    position: relative;
+    border: none;
+    background-color: #ccc;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+#toggleDarkMode {
+    overflow: hidden;
+    /* Styles for round button icons */
+    font-size: 32px;
+    line-height: 40px; display: flex; justify-content: center; align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #eee;
+    color: black;
+    text-align: center;
+    vertical-align: middle;
+    box-shadow: 0 0 0 1px #ccc;
+
+}
+
+#toggleDarkMode:after {
+    content: none;
+}
+    /* Common styles for sun and moon icons */
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+}
+
+body.light-mode #toggleDarkMode {
+    overflow: hidden;
+    /* Styles for round button icons */
+    font-size: 32px;
+    line-height: 40px; display: flex; justify-content: center; align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #eee;
+    color: black;
+    text-align: center;
+    vertical-align: middle;
+    box-shadow: 0 0 0 1px #ccc;
+
+}
+
+#toggleDarkMode:after {
+    content: none;
+}
+    /* Moon icon for light mode */
+    content: '\1F311';
+    transform: translateX(0px);
+}
+
+body.dark-mode #toggleDarkMode {
+    overflow: hidden;
+    /* Styles for round button icons */
+    font-size: 32px;
+    line-height: 40px; display: flex; justify-content: center; align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #eee;
+    color: black;
+    text-align: center;
+    vertical-align: middle;
+    box-shadow: 0 0 0 1px #ccc;
+
+}
+
+#toggleDarkMode:after {
+    content: none;
+}
+    /* Sun icon for dark mode */
+    content: '\1F31E';
+    transform: translateX(0px);
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 24px;
+    height: 24px;
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+/* Toggle button style when dark mode is active */
+body.dark-mode #toggleDarkMode {
+    overflow: hidden;
+    /* Styles for round button icons */
+    font-size: 32px;
+    line-height: 40px; display: flex; justify-content: center; align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #eee;
+    color: black;
+    text-align: center;
+    vertical-align: middle;
+    box-shadow: 0 0 0 1px #ccc;
+
+}
+
+#toggleDarkMode:after {
+    content: none;
+}
+    /* Common styles for sun and moon icons */
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+}
+
+body.light-mode #toggleDarkMode {
+    overflow: hidden;
+    /* Styles for round button icons */
+    font-size: 32px;
+    line-height: 40px; display: flex; justify-content: center; align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #eee;
+    color: black;
+    text-align: center;
+    vertical-align: middle;
+    box-shadow: 0 0 0 1px #ccc;
+
+}
+
+#toggleDarkMode:after {
+    content: none;
+}
+    /* Moon icon for light mode */
+    content: '\1F311';
+    transform: translateX(0px);
+}
+
+body.dark-mode #toggleDarkMode {
+    overflow: hidden;
+    /* Styles for round button icons */
+    font-size: 32px;
+    line-height: 40px; display: flex; justify-content: center; align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #eee;
+    color: black;
+    text-align: center;
+    vertical-align: middle;
+    box-shadow: 0 0 0 1px #ccc;
+
+}
+
+#toggleDarkMode:after {
+    content: none;
+}
+    /* Sun icon for dark mode */
+    content: '\1F31E';
+    transform: translateX(0px);
+    transform: translateX(0px);
+}
